@@ -42,3 +42,7 @@ void openiap_exit(void) {
         openiap_cfg = NULL;
     }
 }
+
+openiap_config_t *openiap_get_config() {
+    return openiap_cfg;
+}

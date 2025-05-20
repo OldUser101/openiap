@@ -7,11 +7,24 @@
 #ifndef OPENIAP_H
 #define OPENIAP_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct openiap_config openiap_config_t;
+typedef struct openiap_device openiap_device_t;
 
 int openiap_init(void);
 void openiap_exit(void);
 
-const char *openiap_get_error(int code); 
+openiap_config_t *openiap_get_config();
+
+int openiap_enumerate_devices(openiap_device_t ***devices, int *count);
+
+const char *openiap_error_name(int code); 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

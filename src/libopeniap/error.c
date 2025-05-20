@@ -11,9 +11,11 @@ static const char *error_list[] = {
     "OPENIAP_GENERAL_FAILURE",
     "OPENIAP_MEMORY_ALLOCATION_ERROR",
     "OPENIAP_ALREADY_INITIALIZED",
+    "OPENIAP_NULL_POINTER",
+    "OPENIAP_NO_MATCHES",
 };
 
-const char *openiap_get_error(int code) {
+const char *openiap_error_name(int code) {
     if (code == 0) { // Return success if the code is zero
         return error_list[1];
     } else if (code > OPENIAP_MAX_ERROR) { // Code out of range, unknown error
