@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: BSD-2-Clause
+// openiap - An open implementation of the iPod Accessory Protocol
+// Copyright (c) 2025, Nathan Gill
+
+#pragma once
+
+#ifndef OPENIAP_ERROR_H
+#define OPENIAP_ERROR_H
+
+#define OPENIAP_MAX_ERROR 1003
+
+#define OPENIAP_ERROR_SUCCESS 0
+#define OPENIAP_ERROR_UNKNOWN (OPENIAP_MAX_ERROR + 1)
+#define OPENIAP_ERROR_GENERAL_FAILURE 1001
+#define OPENIAP_ERROR_MEMORY_ALLOCATION 1002
+#define OPENIAP_ERROR_ALREADY_INITIALIZED 1003
+
+#endif
