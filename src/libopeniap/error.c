@@ -13,6 +13,7 @@ static const char *error_list[] = {
     "OPENIAP_ALREADY_INITIALIZED",
     "OPENIAP_NULL_POINTER",
     "OPENIAP_NO_MATCHES",
+    "OPENIAP_NOT_INITIALIZED",
 };
 
 const char *openiap_error_name(int code) {

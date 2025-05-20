@@ -68,13 +68,16 @@ int openiap_enumerate_devices(openiap_device_t ***devices, int *count) {
         return OPENIAP_ERROR_NULL_POINTER;
     }
 
+    openiap_config_t *cfg = openiap_get_config();
+    if (NULL == cfg) {
+        return OPENIAP_ERROR_NOT_INITIALIZED;
+    }
+
     ssize_t n_devices;
     libusb_device **list;
     int r;
 
     (*devices) = NULL;
-
-    openiap_config_t *cfg = openiap_get_config();
 
     n_devices = libusb_get_device_list(cfg->libusb_ctx, &list);
     for (ssize_t idx = 0; idx < n_devices; ++idx) {
